@@ -1,0 +1,10 @@
+CACHE MANIFEST
+#version 1.0
+
+CACHE:
+    https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.css
+    https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js
+    https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.js
+    https://cdnjs.cloudflare.com/ajax/libs/move.js/0.5.0/move.min.js
+NETWORK:
+    *

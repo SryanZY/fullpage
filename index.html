@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.css">
+    <style>
+        
+        #header {
+            position: fixed;
+            top: 0px;
+            color: #38f;
+            font-size: 30px;
+        }
+        #bottom {
+            position: fixed;
+            top: 30px;
+            color: #3ab;
+            font-size: 35px;
+        }
+        #dataMenu {
+            list-style: none;
+            position: fixed;
+            top: 0;
+            z-index: 999;
+        }
+        #dataMenu li {
+            float: left;
+            margin-right: 8px;
+        }
+        #dataMenu li:last-child {
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+    <ul id="dataMenu">
+        <li data-menuanchor="page1"><a href="#page1">跳转到page1</a></li>
+        <li data-menuanchor="page2"><a href="#page2">跳转到page2</a></li>
+        <li data-menuanchor="page3"><a href="#page3">跳转到page3</a></li>
+    </ul>
+    <div id="fullpage">
+        <div class="section">
+            <h1>这是第一屏页面</h1>
+        </div>
+        <div class="section">
+            <!--左右切换幻灯片-->
+            <div class="slide">slide1</div>
+            <div class="slide">slide1</div>
+            <div class="slide">slide1</div>
+        </div>
+        <div class="section">
+            <h1>这是第三屏页面</h1>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.js"></script>
+<script>
+    
+    $(function () {
+
+        $('#fullpage').fullpage({
+            //可以通过设置sectionsColor为每个section设置背景色
+            sectionsColor: ['green', 'yellow', '#3ab'],
+            anchors: ['page1', 'page2', 'page3'],
+            menu: '#dataMenu', //对应切换的id
+            navigation: true,  //是否显示导航菜单（小圆点）
+            navigationPosition: 'right',
+            navigationTooltips: ['page1', 'page2', 'page3'], //提示信息
+            //定义锚链接,默认是[]，用户可以快速定义到某一页面，不可与页面上的div或class名相同
+            
+            /*
+                *controlArrows-定义是否通过箭头控制slide幻灯片，默认为true;
+                verticalCentered-定于内容是否在中央;
+                resize-定义元素内容是否随着串口变化，默认是true;
+                scrollingSpeed-页面切换的速度，默认是700;
+                locakAnchors-是否锁定锚链接,默认是false;
+                *easing-页面滚动的方式，若要修改需要引入jquery.ul或jquery.easings插件;
+                css3-是否使用transform实现滚动效果;
+                loopTop、loopBottom-滚动到最上方（下方）是否持续滚动;
+                autoScrolling-是否使用插件的滚动方式，默认是true。当变成false时，会出现滚动条;
+                scrollBar:是否包含滚动条，默认是false;
+                paddingTop/paddingBottom-每个section距离页面顶部（底部）距离, 默认是0;
+                *fixedElements:固定的元素（position:fixed），默认null，需要配合选择器;
+                recordHistory-是否记录浏览历史，默认是true
+            */
+           
+           /*方法部分*/
+           //$.fn.fullpage.moveTo(section,slide),section从1开始，slide从0开始
+           
+
+           /*回调函数*/
+           //afterload(anchorLink,index),index从1开始,anchorLink锚链接名称
+           afterLoad: function (anchorLink, index) {
+                console.log(`anchorLink=${anchorLink};index=${index}`);
+           },
+
+           //onLeave(index,nextIndex,direction),index、nextIndex从1开始
+           //afterRender页面初始化完成后触发的事件，仅触发一次
+           //afterResize页面尺寸更改后触发
+        });
+    })
+</script>
+</html>
