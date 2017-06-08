@@ -56,7 +56,7 @@ set方法可以传入要设置的css以及参数，如move('div').set('margin-le
 
 ```  
   
-# 对于H5本地存储的使用  
+# 对于H5离线缓存的使用
 
 ```  
   在advertisement.html的html标签中添加manifest=index.manifest属性，同时在同一目录下创建
