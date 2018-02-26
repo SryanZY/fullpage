@@ -1,13 +1,18 @@
+/*
+ * @Author: SryanZY 
+ * @Date: 2018-02-26 13:59:02 
+ * @Last Modified by:   SryanZY 
+ * @Last Modified time: 2018-02-26 13:59:02 
+ */
 
 $(function () {
-
     $('#fullpage').fullpage({
 
         verticalCentered: false,
         anchors: ['page1', 'page2', 'page3', 'page4'],
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['它，终于来了', '真正与你贴近的个人设备', '非同一般的精准计时', '在三个特点鲜明的系列中找到你的风格'],
+        navigationTooltips: ['它，终于来了', '真正融入你的生活', '非同一般的精准计时', '在三个特点鲜明的系列中找到你的风格'],
 
         afterLoad(anchor, index) {
             switch(index) {

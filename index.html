@@ -6,17 +6,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.css">
     <style>
-        
         #header {
             position: fixed;
             top: 0px;
-            color: #38f;
+            color: #3ab;
             font-size: 30px;
         }
         #bottom {
             position: fixed;
             top: 30px;
-            color: #3ab;
+            color: #38f;
             font-size: 35px;
         }
         #dataMenu {
@@ -55,15 +54,14 @@
         </div>
     </div>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.js"></script>
 <script>
     
     $(function () {
-
         $('#fullpage').fullpage({
             //可以通过设置sectionsColor为每个section设置背景色
-            sectionsColor: ['green', 'yellow', '#3ab'],
+            sectionsColor: ['#ccc', 'yellow', '#3ab'],
             anchors: ['page1', 'page2', 'page3'],
             menu: '#dataMenu', //对应切换的id
             navigation: true,  //是否显示导航菜单（小圆点）
